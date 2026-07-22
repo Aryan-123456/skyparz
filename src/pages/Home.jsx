@@ -35,7 +35,7 @@ export default function Home({ setCurrentPage }) {
                 href="#"
                 onClick={(e) => {
                   e.preventDefault();
-                  handleNavClick('services');
+                  handleNavClick('work');
                 }}
                 className="btn btn-outline btn-lg"
               >

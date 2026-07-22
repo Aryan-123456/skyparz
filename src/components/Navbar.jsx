@@ -74,6 +74,16 @@ export default function Navbar({ currentPage, setCurrentPage }) {
               href="#"
               onClick={(e) => {
                 e.preventDefault();
+                handleNavClick('work');
+              }}
+              className={currentPage === 'work' ? 'active' : ''}
+            >
+              Our Work
+            </a>
+            <a
+              href="#"
+              onClick={(e) => {
+                e.preventDefault();
                 handleNavClick('contact');
               }}
               className={currentPage === 'contact' ? 'active' : ''}
@@ -139,6 +149,16 @@ export default function Navbar({ currentPage, setCurrentPage }) {
           className={currentPage === 'about' ? 'active' : ''}
         >
           About
+        </a>
+        <a
+          href="#"
+          onClick={(e) => {
+            e.preventDefault();
+            handleNavClick('work');
+          }}
+          className={currentPage === 'work' ? 'active' : ''}
+        >
+          Our Work
         </a>
         <a
           href="#"

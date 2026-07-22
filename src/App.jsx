@@ -8,6 +8,7 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import Privacy from './pages/Privacy';
 import Terms from './pages/Terms';
+import Work from './pages/Work';
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState('home');
@@ -20,6 +21,8 @@ export default function App() {
         return <Services setCurrentPage={setCurrentPage} />;
       case 'about':
         return <About setCurrentPage={setCurrentPage} />;
+      case 'work':
+        return <Work setCurrentPage={setCurrentPage} />;
       case 'contact':
         return <Contact setCurrentPage={setCurrentPage} />;
       case 'privacy':

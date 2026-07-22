@@ -80,6 +80,17 @@ export default function Footer({ setCurrentPage }) {
                   href="#"
                   onClick={(e) => {
                     e.preventDefault();
+                    handleNavClick('work');
+                  }}
+                >
+                  Our Work
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault();
                     handleNavClick('about');
                   }}
                 >
