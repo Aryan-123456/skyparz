@@ -179,7 +179,7 @@ export default function About({ setCurrentPage }) {
           <div className="team-grid">
             <div className="team-card">
               <div className="team-avatar">DE</div>
-              <h3>Dev</h3>
+              <h3>Dev Parmar</h3>
               <p className="team-role">CEO</p>
               <div className="team-social">
                 <a href="#" aria-label="LinkedIn"><i className="bi bi-linkedin"></i></a>
@@ -189,7 +189,7 @@ export default function About({ setCurrentPage }) {
 
             <div className="team-card">
               <div className="team-avatar">VI</div>
-              <h3>Vidhi</h3>
+              <h3>Vidhi Shah</h3>
               <p className="team-role">Co-Founder</p>
               <div className="team-social">
                 <a href="#" aria-label="LinkedIn"><i className="bi bi-linkedin"></i></a>
@@ -199,7 +199,7 @@ export default function About({ setCurrentPage }) {
 
             <div className="team-card">
               <div className="team-avatar">KR</div>
-              <h3>Kruti</h3>
+              <h3>Kruti Mehta</h3>
               <p className="team-role">Influencer</p>
               <div className="team-social">
                 <a href="#" aria-label="LinkedIn"><i className="bi bi-linkedin"></i></a>
@@ -209,7 +209,7 @@ export default function About({ setCurrentPage }) {
 
             <div className="team-card">
               <div className="team-avatar">SH</div>
-              <h3>Shubham</h3>
+              <h3>Aryan Chawla</h3>
               <p className="team-role">Web Developer</p>
               <div className="team-social">
                 <a href="#" aria-label="LinkedIn"><i className="bi bi-linkedin"></i></a>
@@ -219,7 +219,7 @@ export default function About({ setCurrentPage }) {
 
             <div className="team-card">
               <div className="team-avatar">AR</div>
-              <h3>Aryan</h3>
+              <h3>Shubham Mehta</h3>
               <p className="team-role">Application Developer</p>
               <div className="team-social">
                 <a href="#" aria-label="LinkedIn"><i className="bi bi-linkedin"></i></a>
@@ -229,7 +229,7 @@ export default function About({ setCurrentPage }) {
 
             <div className="team-card">
               <div className="team-avatar">JA</div>
-              <h3>Jainil</h3>
+              <h3>Jainil Doshi</h3>
               <p className="team-role">BDE</p>
               <div className="team-social">
                 <a href="#" aria-label="LinkedIn"><i className="bi bi-linkedin"></i></a>
@@ -239,7 +239,7 @@ export default function About({ setCurrentPage }) {
 
             <div className="team-card">
               <div className="team-avatar">NE</div>
-              <h3>Neel</h3>
+              <h3>Neel Patel</h3>
               <p className="team-role">Videography Editor</p>
               <div className="team-social">
                 <a href="#" aria-label="LinkedIn"><i className="bi bi-linkedin"></i></a>
@@ -249,7 +249,7 @@ export default function About({ setCurrentPage }) {
 
             <div className="team-card">
               <div className="team-avatar">JI</div>
-              <h3>Jinesh</h3>
+              <h3>Jinesh Patel</h3>
               <p className="team-role">Videography Editor</p>
               <div className="team-social">
                 <a href="#" aria-label="LinkedIn"><i className="bi bi-linkedin"></i></a>
