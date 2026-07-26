@@ -36,20 +36,13 @@ export default function Work({ setCurrentPage }) {
 
   return (
     <>
-      <section className="page-hero work-page-hero">
-        <div className="container">
-          <div className="breadcrumb">
-            <a href="#" onClick={(e) => { e.preventDefault(); setCurrentPage('home'); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>Home</a>
-            <i className="bi bi-chevron-right"></i><span>Our Work</span>
-          </div>
-          <span className="work-eyebrow">Skyparz Innovations Portfolio</span>
-          <h1>Ideas Turned Into <span className="gradient-text">Impact.</span></h1>
-          <p>A selection of real creative work from our portfolio — brand identities, social campaigns, fashion presentations, product advertising, hospitality designs and wedding creatives.</p>
-        </div>
-      </section>
-
       <section className="work-showcase section">
         <div className="container">
+          <nav className="breadcrumb" aria-label="Breadcrumb">
+            <a href="#" onClick={(e) => { e.preventDefault(); setCurrentPage('home'); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>Home</a>
+            <i className="bi bi-chevron-right"></i>
+            <span>Our Work</span>
+          </nav>
           <div className="section-header work-heading">
             <span className="section-label"><i className="bi bi-grid-1x2"></i> Selected Work</span>
             <h2 className="section-title">Creative Work Across <span className="gradient-text">Industries</span></h2>

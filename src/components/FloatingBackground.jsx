@@ -26,8 +26,10 @@ export default function FloatingBackground() {
   const containerRef = useRef(null);
   const particlesRef = useRef([]);
   const mouseRef = useRef({ x: -1000, y: -1000 });
+  const isMobile = typeof window !== 'undefined' && window.innerWidth <= 768;
 
   useEffect(() => {
+    if (isMobile) return;
     const numCols = 6;
     const numRows = 5;
     const numParticles = numCols * numRows;
@@ -174,6 +176,8 @@ export default function FloatingBackground() {
       document.removeEventListener('mouseleave', handleMouseLeave);
     };
   }, []);
+
+  if (isMobile) return null;
 
   return (
     <div

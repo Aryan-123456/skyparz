@@ -58,7 +58,7 @@ export default function Contact({ setCurrentPage }) {
       {/* ========== PAGE HERO ========== */}
       <section className="page-hero">
         <div className="container">
-          <div className="breadcrumb">
+          <nav className="breadcrumb" aria-label="Breadcrumb">
             <a
               href="#"
               onClick={(e) => {
@@ -71,7 +71,7 @@ export default function Contact({ setCurrentPage }) {
             </a>
             <i className="bi bi-chevron-right"></i>
             <span>Contact</span>
-          </div>
+          </nav>
           <h1>
             Let's Build Something <span className="gradient-text">Great Together</span>
           </h1>

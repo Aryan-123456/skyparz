@@ -7,7 +7,7 @@ export default function About({ setCurrentPage }) {
       {/* ========== PAGE HERO ========== */}
       <section className="page-hero">
         <div className="container">
-          <div className="breadcrumb">
+          <nav className="breadcrumb" aria-label="Breadcrumb">
             <a
               href="#"
               onClick={(e) => {
@@ -20,7 +20,7 @@ export default function About({ setCurrentPage }) {
             </a>
             <i className="bi bi-chevron-right"></i>
             <span>About</span>
-          </div>
+          </nav>
           <h1>
             The Story Behind <span className="gradient-text">SkyparzInnovation</span>
           </h1>
@@ -178,9 +178,9 @@ export default function About({ setCurrentPage }) {
 
           <div className="team-grid">
             <div className="team-card">
-              <div className="team-avatar">AK</div>
-              <h3>Aditya Kapoor</h3>
-              <p className="team-role">Founder & CEO</p>
+              <div className="team-avatar">DE</div>
+              <h3>Dev</h3>
+              <p className="team-role">CEO</p>
               <div className="team-social">
                 <a href="#" aria-label="LinkedIn"><i className="bi bi-linkedin"></i></a>
                 <a href="#" aria-label="Twitter"><i className="bi bi-twitter-x"></i></a>
@@ -188,19 +188,9 @@ export default function About({ setCurrentPage }) {
             </div>
 
             <div className="team-card">
-              <div className="team-avatar">PS</div>
-              <h3>Priya Sharma</h3>
-              <p className="team-role">Creative Director</p>
-              <div className="team-social">
-                <a href="#" aria-label="LinkedIn"><i className="bi bi-linkedin"></i></a>
-                <a href="#" aria-label="Dribbble"><i className="bi bi-dribbble"></i></a>
-              </div>
-            </div>
-
-            <div className="team-card">
-              <div className="team-avatar">VR</div>
-              <h3>Vikram Rao</h3>
-              <p className="team-role">Head of Marketing</p>
+              <div className="team-avatar">VI</div>
+              <h3>Vidhi</h3>
+              <p className="team-role">Co-Founder</p>
               <div className="team-social">
                 <a href="#" aria-label="LinkedIn"><i className="bi bi-linkedin"></i></a>
                 <a href="#" aria-label="Twitter"><i className="bi bi-twitter-x"></i></a>
@@ -208,9 +198,19 @@ export default function About({ setCurrentPage }) {
             </div>
 
             <div className="team-card">
-              <div className="team-avatar">NJ</div>
-              <h3>Neha Joshi</h3>
-              <p className="team-role">Lead Developer</p>
+              <div className="team-avatar">KR</div>
+              <h3>Kruti</h3>
+              <p className="team-role">Influencer</p>
+              <div className="team-social">
+                <a href="#" aria-label="LinkedIn"><i className="bi bi-linkedin"></i></a>
+                <a href="#" aria-label="Instagram"><i className="bi bi-instagram"></i></a>
+              </div>
+            </div>
+
+            <div className="team-card">
+              <div className="team-avatar">SH</div>
+              <h3>Shubham</h3>
+              <p className="team-role">Web Developer</p>
               <div className="team-social">
                 <a href="#" aria-label="LinkedIn"><i className="bi bi-linkedin"></i></a>
                 <a href="#" aria-label="GitHub"><i className="bi bi-github"></i></a>
@@ -218,9 +218,29 @@ export default function About({ setCurrentPage }) {
             </div>
 
             <div className="team-card">
-              <div className="team-avatar">RD</div>
-              <h3>Rohan Desai</h3>
-              <p className="team-role">Video Producer</p>
+              <div className="team-avatar">AR</div>
+              <h3>Aryan</h3>
+              <p className="team-role">Application Developer</p>
+              <div className="team-social">
+                <a href="#" aria-label="LinkedIn"><i className="bi bi-linkedin"></i></a>
+                <a href="#" aria-label="GitHub"><i className="bi bi-github"></i></a>
+              </div>
+            </div>
+
+            <div className="team-card">
+              <div className="team-avatar">JA</div>
+              <h3>Jainil</h3>
+              <p className="team-role">BDE</p>
+              <div className="team-social">
+                <a href="#" aria-label="LinkedIn"><i className="bi bi-linkedin"></i></a>
+                <a href="#" aria-label="Twitter"><i className="bi bi-twitter-x"></i></a>
+              </div>
+            </div>
+
+            <div className="team-card">
+              <div className="team-avatar">NE</div>
+              <h3>Neel</h3>
+              <p className="team-role">Videography Editor</p>
               <div className="team-social">
                 <a href="#" aria-label="LinkedIn"><i className="bi bi-linkedin"></i></a>
                 <a href="#" aria-label="YouTube"><i className="bi bi-youtube"></i></a>
@@ -228,32 +248,12 @@ export default function About({ setCurrentPage }) {
             </div>
 
             <div className="team-card">
-              <div className="team-avatar">AS</div>
-              <h3>Ananya Singh</h3>
-              <p className="team-role">Content Strategist</p>
+              <div className="team-avatar">JI</div>
+              <h3>Jinesh</h3>
+              <p className="team-role">Videography Editor</p>
               <div className="team-social">
                 <a href="#" aria-label="LinkedIn"><i className="bi bi-linkedin"></i></a>
-                <a href="#" aria-label="Twitter"><i className="bi bi-twitter-x"></i></a>
-              </div>
-            </div>
-
-            <div className="team-card">
-              <div className="team-avatar">KM</div>
-              <h3>Karan Malhotra</h3>
-              <p className="team-role">SEO Specialist</p>
-              <div className="team-social">
-                <a href="#" aria-label="LinkedIn"><i className="bi bi-linkedin"></i></a>
-                <a href="#" aria-label="Twitter"><i className="bi bi-twitter-x"></i></a>
-              </div>
-            </div>
-
-            <div className="team-card">
-              <div className="team-avatar">IS</div>
-              <h3>Ishita Saxena</h3>
-              <p className="team-role">UI/UX Designer</p>
-              <div className="team-social">
-                <a href="#" aria-label="LinkedIn"><i className="bi bi-linkedin"></i></a>
-                <a href="#" aria-label="Behance"><i className="bi bi-behance"></i></a>
+                <a href="#" aria-label="YouTube"><i className="bi bi-youtube"></i></a>
               </div>
             </div>
           </div>

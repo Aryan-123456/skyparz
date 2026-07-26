@@ -12,7 +12,7 @@ export default function Services({ setCurrentPage }) {
       {/* ========== PAGE HERO ========== */}
       <section className="page-hero">
         <div className="container">
-          <div className="breadcrumb">
+          <nav className="breadcrumb" aria-label="Breadcrumb">
             <a
               href="#"
               onClick={(e) => {
@@ -25,7 +25,7 @@ export default function Services({ setCurrentPage }) {
             </a>
             <i className="bi bi-chevron-right"></i>
             <span>Services</span>
-          </div>
+          </nav>
           <h1>
             Our <span className="gradient-text">Services</span>
           </h1>

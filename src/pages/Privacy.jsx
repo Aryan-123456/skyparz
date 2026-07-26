@@ -6,7 +6,7 @@ export default function Privacy({ setCurrentPage }) {
       {/* ========== PAGE HERO ========== */}
       <section className="page-hero">
         <div className="container">
-          <div className="breadcrumb">
+          <nav className="breadcrumb" aria-label="Breadcrumb">
             <a
               href="#"
               onClick={(e) => {
@@ -19,7 +19,7 @@ export default function Privacy({ setCurrentPage }) {
             </a>
             <i className="bi bi-chevron-right"></i>
             <span>Privacy Policy</span>
-          </div>
+          </nav>
           <h1>
             Privacy <span className="gradient-text">Policy</span>
           </h1>

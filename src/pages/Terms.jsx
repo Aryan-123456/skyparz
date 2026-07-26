@@ -6,7 +6,7 @@ export default function Terms({ setCurrentPage }) {
       {/* ========== PAGE HERO ========== */}
       <section className="page-hero">
         <div className="container">
-          <div className="breadcrumb">
+          <nav className="breadcrumb" aria-label="Breadcrumb">
             <a
               href="#"
               onClick={(e) => {
@@ -19,7 +19,7 @@ export default function Terms({ setCurrentPage }) {
             </a>
             <i className="bi bi-chevron-right"></i>
             <span>Terms of Service</span>
-          </div>
+          </nav>
           <h1>
             Terms of <span className="gradient-text">Service</span>
           </h1>
