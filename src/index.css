@@ -2222,6 +2222,36 @@ input, textarea, select {
   color: white;
 }
 
+.team-contact-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 4px;
+  padding: 10px 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-accent-blue);
+  background: var(--gradient-subtle);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  transition: all var(--transition-base);
+  text-decoration: none;
+  width: 100%;
+}
+
+.team-contact-btn:hover {
+  background: var(--gradient-primary);
+  color: white;
+  border-color: transparent;
+  box-shadow: var(--shadow-button);
+  transform: translateY(-2px);
+}
+
+.team-contact-btn i {
+  font-size: 0.95rem;
+}
+
 /* ---------- Timeline Section ---------- */
 .timeline-section {
   padding: var(--section-padding);

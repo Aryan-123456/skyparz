@@ -1,6 +1,17 @@
 import React from 'react';
 import AnimatedCounter from '../components/AnimatedCounter';
 
+const experts = [
+  { avatar: 'DP', name: 'Dev Parmar', role: 'CEO' },
+  { avatar: 'VS', name: 'Vidhi Shah', role: 'Co-Founder' },
+  { avatar: 'KM', name: 'Kruti Mehta', role: 'Influencer' },
+  { avatar: 'AC', name: 'Aryan Chawla', role: 'Web Developer' },
+  { avatar: 'SM', name: 'Shubham Mehta', role: 'Application Developer' },
+  { avatar: 'JD', name: 'Jainil Doshi', role: 'BDE' },
+  { avatar: 'NP', name: 'Neel Patel', role: 'Videography Editor' },
+  { avatar: 'JP', name: 'Jinesh Patel', role: 'Videography Editor' },
+];
+
 export default function About({ setCurrentPage }) {
   return (
     <>
@@ -177,85 +188,21 @@ export default function About({ setCurrentPage }) {
           </div>
 
           <div className="team-grid">
-            <div className="team-card">
-              <div className="team-avatar">DE</div>
-              <h3>Dev Parmar</h3>
-              <p className="team-role">CEO</p>
-              <div className="team-social">
-                <a href="#" aria-label="LinkedIn"><i className="bi bi-linkedin"></i></a>
-                <a href="#" aria-label="Twitter"><i className="bi bi-twitter-x"></i></a>
+            {experts.map((expert) => (
+              <div className="team-card" key={expert.name}>
+                <div className="team-avatar">{expert.avatar}</div>
+                <h3>{expert.name}</h3>
+                <p className="team-role">{expert.role}</p>
+                <a
+                  href={`https://mail.google.com/mail/?view=cm&fs=1&to=skyparzinnovation@gmail.com&su=${encodeURIComponent(`Message for ${expert.name}`)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="team-contact-btn"
+                >
+                  <i className="bi bi-envelope-fill"></i> Contact
+                </a>
               </div>
-            </div>
-
-            <div className="team-card">
-              <div className="team-avatar">VI</div>
-              <h3>Vidhi Shah</h3>
-              <p className="team-role">Co-Founder</p>
-              <div className="team-social">
-                <a href="#" aria-label="LinkedIn"><i className="bi bi-linkedin"></i></a>
-                <a href="#" aria-label="Twitter"><i className="bi bi-twitter-x"></i></a>
-              </div>
-            </div>
-
-            <div className="team-card">
-              <div className="team-avatar">KR</div>
-              <h3>Kruti Mehta</h3>
-              <p className="team-role">Influencer</p>
-              <div className="team-social">
-                <a href="#" aria-label="LinkedIn"><i className="bi bi-linkedin"></i></a>
-                <a href="#" aria-label="Instagram"><i className="bi bi-instagram"></i></a>
-              </div>
-            </div>
-
-            <div className="team-card">
-              <div className="team-avatar">SH</div>
-              <h3>Aryan Chawla</h3>
-              <p className="team-role">Web Developer</p>
-              <div className="team-social">
-                <a href="#" aria-label="LinkedIn"><i className="bi bi-linkedin"></i></a>
-                <a href="#" aria-label="GitHub"><i className="bi bi-github"></i></a>
-              </div>
-            </div>
-
-            <div className="team-card">
-              <div className="team-avatar">AR</div>
-              <h3>Shubham Mehta</h3>
-              <p className="team-role">Application Developer</p>
-              <div className="team-social">
-                <a href="#" aria-label="LinkedIn"><i className="bi bi-linkedin"></i></a>
-                <a href="#" aria-label="GitHub"><i className="bi bi-github"></i></a>
-              </div>
-            </div>
-
-            <div className="team-card">
-              <div className="team-avatar">JA</div>
-              <h3>Jainil Doshi</h3>
-              <p className="team-role">BDE</p>
-              <div className="team-social">
-                <a href="#" aria-label="LinkedIn"><i className="bi bi-linkedin"></i></a>
-                <a href="#" aria-label="Twitter"><i className="bi bi-twitter-x"></i></a>
-              </div>
-            </div>
-
-            <div className="team-card">
-              <div className="team-avatar">NE</div>
-              <h3>Neel Patel</h3>
-              <p className="team-role">Videography Editor</p>
-              <div className="team-social">
-                <a href="#" aria-label="LinkedIn"><i className="bi bi-linkedin"></i></a>
-                <a href="#" aria-label="YouTube"><i className="bi bi-youtube"></i></a>
-              </div>
-            </div>
-
-            <div className="team-card">
-              <div className="team-avatar">JI</div>
-              <h3>Jinesh Patel</h3>
-              <p className="team-role">Videography Editor</p>
-              <div className="team-social">
-                <a href="#" aria-label="LinkedIn"><i className="bi bi-linkedin"></i></a>
-                <a href="#" aria-label="YouTube"><i className="bi bi-youtube"></i></a>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>

@@ -24,7 +24,7 @@ export default function Footer({ setCurrentPage }) {
     <footer className="footer">
       <div className="container">
         <div className="footer-grid">
-          
+
           {/* Brand Info & Socials */}
           <div className="footer-brand">
             <a
@@ -62,9 +62,7 @@ export default function Footer({ setCurrentPage }) {
               >
                 <i className="bi bi-twitter-x"></i>
               </a>
-              <a href="#" aria-label="YouTube">
-                <i className="bi bi-youtube"></i>
-              </a>
+
               <a href="#" aria-label="Facebook">
                 <i className="bi bi-facebook"></i>
               </a>
