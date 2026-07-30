@@ -13,6 +13,25 @@ const experts = [
 ];
 
 export default function About({ setCurrentPage }) {
+  const handleContactClick = (e, expertName) => {
+    e.preventDefault();
+    const recipient = 'skyparzinnovation@gmail.com';
+    const subject = encodeURIComponent(`Message for ${expertName}`);
+    const isMobile =
+      /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ||
+      window.innerWidth <= 768;
+
+    if (isMobile) {
+      window.location.href = `mailto:${recipient}?subject=${subject}`;
+    } else {
+      window.open(
+        `https://mail.google.com/mail/?view=cm&fs=1&to=${recipient}&su=${subject}`,
+        '_blank',
+        'noopener,noreferrer'
+      );
+    }
+  };
+
   return (
     <>
       {/* ========== PAGE HERO ========== */}
@@ -194,9 +213,8 @@ export default function About({ setCurrentPage }) {
                 <h3>{expert.name}</h3>
                 <p className="team-role">{expert.role}</p>
                 <a
-                  href={`https://mail.google.com/mail/?view=cm&fs=1&to=skyparzinnovation@gmail.com&su=${encodeURIComponent(`Message for ${expert.name}`)}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href={`mailto:skyparzinnovation@gmail.com?subject=${encodeURIComponent(`Message for ${expert.name}`)}`}
+                  onClick={(e) => handleContactClick(e, expert.name)}
                   className="team-contact-btn"
                 >
                   <i className="bi bi-envelope-fill"></i> Contact
