@@ -63,7 +63,12 @@ export default function Footer({ setCurrentPage }) {
                 <i className="bi bi-twitter-x"></i>
               </a>
 
-              <a href="#" aria-label="Facebook">
+              <a
+                href="https://www.facebook.com/profile.php?id=61585630963621"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+              >
                 <i className="bi bi-facebook"></i>
               </a>
             </div>
