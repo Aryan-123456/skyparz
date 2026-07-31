@@ -51,7 +51,12 @@ export default function Footer({ setCurrentPage }) {
               >
                 <i className="bi bi-instagram"></i>
               </a>
-              <a href="#" aria-label="LinkedIn">
+              <a
+                href="https://www.linkedin.com/company/skyparz-innovations/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+              >
                 <i className="bi bi-linkedin"></i>
               </a>
               <a
