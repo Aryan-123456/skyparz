@@ -54,7 +54,7 @@ export default function Home({ setCurrentPage }) {
       {/* ========== TRUSTED BY ========== */}
       <section className="trusted-section" aria-label="Trusted by leading brands">
         <div className="container">
-          <p className="trusted-label">Trusted by 100+ brands worldwide</p>
+          <p className="trusted-label">Trusted by 50+ brands worldwide</p>
         </div>
         <div className="trusted-marquee">
           <div className="trusted-logo"><i className="bi bi-building"></i> TajSkyline</div>

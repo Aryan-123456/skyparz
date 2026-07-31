@@ -118,7 +118,12 @@ export default function Navbar({ currentPage, setCurrentPage }) {
         </div>
       </nav>
 
-      {/* Mobile Nav */}
+      {/* Mobile Nav Overlay & Dropdown Card */}
+      <div
+        className={`mobile-nav-backdrop ${isOpen ? 'active' : ''}`}
+        onClick={() => setIsOpen(false)}
+        aria-hidden="true"
+      />
       <div className={`mobile-nav ${isOpen ? 'active' : ''}`} id="mobileNav">
         <a
           href="#"
@@ -177,7 +182,7 @@ export default function Navbar({ currentPage, setCurrentPage }) {
             handleNavClick('contact');
           }}
           className="btn btn-primary"
-          style={{ marginTop: '16px', color: '#ffffff' }}
+          style={{ marginTop: '8px', color: '#ffffff', justifyContent: 'center' }}
         >
           Get Started <i className="bi bi-arrow-right" style={{ marginLeft: '8px', color: '#ffffff' }}></i>
         </a>
