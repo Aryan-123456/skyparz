@@ -67,7 +67,7 @@ export default function About({ setCurrentPage }) {
           <div className="story-grid">
             <div className="story-visual">
               <div className="story-image-container">
-                <i className="bi bi-rocket-takeoff story-image-icon"></i>
+                <img src="/logo.jpeg" alt="Skyparz Innovation Logo" className="story-logo-img" />
               </div>
               <div className="story-float-card top-right">
                 <div>

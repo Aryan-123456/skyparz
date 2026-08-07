@@ -35,7 +35,7 @@ export default function Footer({ setCurrentPage }) {
               }}
               className="nav-logo"
             >
-              <div className="logo-icon">S</div>
+              <img src="/logo.jpeg" alt="Skyparz Innovation Logo" className="nav-logo-img" />
               <span>SKYPARZ</span>
             </a>
             <p>
