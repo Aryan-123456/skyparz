@@ -36,7 +36,7 @@ export default function Navbar({ currentPage, setCurrentPage }) {
             aria-label="SkyparzInnovation Home"
           >
             <img src="/logo.jpeg" alt="Skyparz Innovation Logo" className="nav-logo-img" />
-            <span>SKYPARZ</span>
+            <span>SKYPARZ INNOVATIONS </span>
           </a>
 
           <div className="nav-links" id="navLinks">
