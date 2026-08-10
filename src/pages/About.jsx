@@ -8,8 +8,8 @@ const experts = [
   { avatar: 'AC', name: 'Aryan Chawla', role: 'Web Developer' },
   { avatar: 'SM', name: 'Shubham Mehta', role: 'Application Developer' },
   { avatar: 'JD', name: 'Jainil Doshi', role: 'BDE' },
+  { avatar: 'PK', name: 'Prince Kakadiya', role: 'BDE' },
   { avatar: 'NP', name: 'Neel Patel', role: 'Videography Editor' },
-  { avatar: 'JP', name: 'Jinesh Patel', role: 'Videography Editor' },
 ];
 
 export default function About({ setCurrentPage }) {
