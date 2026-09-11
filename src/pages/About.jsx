@@ -104,7 +104,7 @@ export default function About({ setCurrentPage }) {
               <p className="story-text">
                 SkyparzInnovation was born from a simple belief: every brand deserves a digital presence that truly
                 represents its potential. What started as a small team of passionate marketers and designers has grown
-                into a full-service digital agency trusted by over 200 brands across India and beyond.
+                into a full-service digital agency trusted by over 50+ brands across India and beyond.
               </p>
 
               <p className="story-text">
@@ -114,7 +114,7 @@ export default function About({ setCurrentPage }) {
               </p>
 
               <p className="story-text">
-                Today, our team of 30+ specialists covers every aspect of digital — from social media and SEO to web
+                Today, our team of 6+ specialists covers every aspect of digital — from social media and SEO to web
                 development and video production — ensuring our clients get a seamless, integrated experience that
                 drives real business growth.
               </p>

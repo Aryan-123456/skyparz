@@ -330,13 +330,13 @@ export default function Home({ setCurrentPage }) {
               </div>
               <p className="testimonial-text">
                 "SkyparzInnovation completely transformed our digital presence. Our social media engagement increased
-                by 340% in just 3 months. Their team truly understands what it takes to grow a brand online."
+                by 60% in just 3 months. Their team truly understands what it takes to grow a brand online."
               </p>
               <div className="testimonial-author">
                 <div className="testimonial-avatar">RK</div>
                 <div className="testimonial-info">
-                  <h4>Rajesh Kumar</h4>
-                  <p>CEO, TechCorp India</p>
+                  <h4>Denim K. Thomas</h4>
+                  <p>CEO, Kottayam Cars</p>
                 </div>
               </div>
             </div>
@@ -350,14 +350,14 @@ export default function Home({ setCurrentPage }) {
                 <i className="bi bi-star-fill"></i>
               </div>
               <p className="testimonial-text">
-                "The website they built for us exceeded every expectation. Clean, fast, and beautifully designed — our
-                conversion rate doubled within weeks. I can't recommend them enough!"
+                "The logo they designed for us exceeded every expectation. Clean, fast, and beautifully designed.
+                I can't recommend them enough!"
               </p>
               <div className="testimonial-author">
                 <div className="testimonial-avatar">SP</div>
                 <div className="testimonial-info">
-                  <h4>Sneha Patel</h4>
-                  <p>Founder, Luxebrands</p>
+                  <h4>Mr. Ajay</h4>
+                  <p>CEO, RBC Transport</p>
                 </div>
               </div>
             </div>
@@ -371,14 +371,14 @@ export default function Home({ setCurrentPage }) {
                 <i className="bi bi-star-fill"></i>
               </div>
               <p className="testimonial-text">
-                "Their video production quality is outstanding. From concept to final cut, the team was professional,
-                creative, and delivered on time. Our product launch video went viral with 2M+ views."
+                "Their content quality is outstanding. From concept to final cut, the team was professional,
+                creative, and delivered on time.."
               </p>
               <div className="testimonial-author">
                 <div className="testimonial-avatar">AM</div>
                 <div className="testimonial-info">
-                  <h4>Arjun Mehta</h4>
-                  <p>Marketing Head, GrowthStack</p>
+                  <h4>Prince Kakadiya</h4>
+                  <p>Founder, Arjunkart jewellery</p>
                 </div>
               </div>
             </div>
