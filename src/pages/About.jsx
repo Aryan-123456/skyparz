@@ -193,7 +193,7 @@ export default function About({ setCurrentPage }) {
         </div>
       </section>
 
-      {/* ========== OUR TEAM ========== */}
+      {/* ========== OUR TEAM (COMMENTED OUT) ==========
       <section className="team-section section" id="team">
         <div className="container">
           <div className="section-header">
@@ -224,6 +224,7 @@ export default function About({ setCurrentPage }) {
           </div>
         </div>
       </section>
+      ========== END OUR TEAM ========== */}
 
       {/* ========== MILESTONES TIMELINE ========== */}
       <section className="timeline-section section" id="milestones">
