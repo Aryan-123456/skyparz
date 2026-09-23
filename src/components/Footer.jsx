@@ -105,11 +105,13 @@ export default function Footer({ setCurrentPage }) {
                   About Us
                 </a>
               </li>
-              <li>
+
+              {/* <li>
                 <a href="#" onClick={handleOurTeamClick}>
                   Our Team
                 </a>
-              </li>
+              </li> */}
+
               <li>
                 <a
                   href="#"
