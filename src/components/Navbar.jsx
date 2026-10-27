@@ -84,6 +84,16 @@ export default function Navbar({ currentPage, setCurrentPage }) {
               href="#"
               onClick={(e) => {
                 e.preventDefault();
+                handleNavClick('blog');
+              }}
+              className={currentPage === 'blog' || currentPage === 'blog-detail' ? 'active' : ''}
+            >
+              Blog
+            </a>
+            <a
+              href="#"
+              onClick={(e) => {
+                e.preventDefault();
                 handleNavClick('contact');
               }}
               className={currentPage === 'contact' ? 'active' : ''}
@@ -164,6 +174,16 @@ export default function Navbar({ currentPage, setCurrentPage }) {
           className={currentPage === 'work' ? 'active' : ''}
         >
           Our Work
+        </a>
+        <a
+          href="#"
+          onClick={(e) => {
+            e.preventDefault();
+            handleNavClick('blog');
+          }}
+          className={currentPage === 'blog' || currentPage === 'blog-detail' ? 'active' : ''}
+        >
+          Blog
         </a>
         <a
           href="#"

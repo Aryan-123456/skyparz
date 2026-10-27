@@ -9,9 +9,12 @@ import Contact from './pages/Contact';
 import Privacy from './pages/Privacy';
 import Terms from './pages/Terms';
 import Work from './pages/Work';
+import Blog from './pages/Blog';
+import BlogDetail from './pages/BlogDetail';
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState('home');
+  const [selectedBlogSlug, setSelectedBlogSlug] = useState('how-to-grow-your-business-on-instagram-2026');
 
   const renderPage = () => {
     switch (currentPage) {
@@ -23,6 +26,16 @@ export default function App() {
         return <About setCurrentPage={setCurrentPage} />;
       case 'work':
         return <Work setCurrentPage={setCurrentPage} />;
+      case 'blog':
+        return <Blog setCurrentPage={setCurrentPage} setSelectedBlogSlug={setSelectedBlogSlug} />;
+      case 'blog-detail':
+        return (
+          <BlogDetail
+            slug={selectedBlogSlug}
+            setCurrentPage={setCurrentPage}
+            setSelectedBlogSlug={setSelectedBlogSlug}
+          />
+        );
       case 'contact':
         return <Contact setCurrentPage={setCurrentPage} />;
       case 'privacy':

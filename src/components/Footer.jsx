@@ -6,20 +6,6 @@ export default function Footer({ setCurrentPage }) {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  const handleOurTeamClick = (e) => {
-    e.preventDefault();
-    setCurrentPage('about');
-    // Allow React state transition to complete before scrolling
-    setTimeout(() => {
-      const element = document.getElementById('team');
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-      } else {
-        window.scrollTo({ top: 1200, behavior: 'smooth' });
-      }
-    }, 100);
-  };
-
   return (
     <footer className="footer">
       <div className="container">
@@ -103,6 +89,17 @@ export default function Footer({ setCurrentPage }) {
                   }}
                 >
                   About Us
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleNavClick('blog');
+                  }}
+                >
+                  Blog & Insights
                 </a>
               </li>
 
