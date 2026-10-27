@@ -5,6 +5,7 @@ export default function BlogDetail({ slug, setCurrentPage, setSelectedBlogSlug }
   const [scrollProgress, setScrollProgress] = useState(0);
   const [copied, setCopied] = useState(false);
   const [openFaqIndex, setOpenFaqIndex] = useState(null);
+  const [mobileTocOpen, setMobileTocOpen] = useState(false);
 
   const blog = blogs.find((b) => b.slug === slug) || blogs[0];
 
@@ -40,6 +41,16 @@ export default function BlogDetail({ slug, setCurrentPage, setSelectedBlogSlug }
   const handleReadRelated = (relatedSlug) => {
     setSelectedBlogSlug(relatedSlug);
     window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const scrollToSection = (sectionId) => {
+    setMobileTocOpen(false);
+    const el = document.getElementById(sectionId);
+    if (el) {
+      const yOffset = -90;
+      const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      window.scrollTo({ top: y, behavior: 'smooth' });
+    }
   };
 
   const relatedBlogs = blogs.filter((b) => b.slug !== blog.slug);
@@ -170,7 +181,7 @@ export default function BlogDetail({ slug, setCurrentPage, setSelectedBlogSlug }
       <section className="blog-detail-body-section section">
         <div className="container">
           <div className="blog-detail-layout">
-            {/* Sidebar with Table of Contents */}
+            {/* Sidebar with Table of Contents (Desktop) */}
             <aside className="blog-detail-sidebar">
               <div className="blog-sidebar-sticky">
                 <div className="blog-sidebar-card">
@@ -186,8 +197,7 @@ export default function BlogDetail({ slug, setCurrentPage, setSelectedBlogSlug }
                             href={`#${sectionId}`}
                             onClick={(e) => {
                               e.preventDefault();
-                              const el = document.getElementById(sectionId);
-                              if (el) el.scrollIntoView({ behavior: 'smooth' });
+                              scrollToSection(sectionId);
                             }}
                           >
                             {section.heading}
@@ -201,8 +211,7 @@ export default function BlogDetail({ slug, setCurrentPage, setSelectedBlogSlug }
                           href="#faqs-section"
                           onClick={(e) => {
                             e.preventDefault();
-                            const el = document.getElementById('faqs-section');
-                            if (el) el.scrollIntoView({ behavior: 'smooth' });
+                            scrollToSection('faqs-section');
                           }}
                         >
                           Frequently Asked Questions
@@ -231,6 +240,57 @@ export default function BlogDetail({ slug, setCurrentPage, setSelectedBlogSlug }
 
             {/* Article Content Stream */}
             <main className="blog-detail-content-area">
+              {/* Mobile Table of Contents Collapsible Button */}
+              <div className="blog-mobile-toc-container">
+                <button
+                  className="blog-mobile-toc-btn"
+                  onClick={() => setMobileTocOpen(!mobileTocOpen)}
+                  aria-expanded={mobileTocOpen}
+                  aria-label="Toggle Table of Contents"
+                >
+                  <span className="blog-mobile-toc-btn-left">
+                    <i className="bi bi-list-nested"></i>
+                    <span>Quick Navigation ({blog.sections.length} sections)</span>
+                  </span>
+                  <i className={`bi ${mobileTocOpen ? 'bi-chevron-up' : 'bi-chevron-down'}`}></i>
+                </button>
+                {mobileTocOpen && (
+                  <div className="blog-mobile-toc-dropdown">
+                    <ul className="blog-mobile-toc-list">
+                      {blog.sections.map((section, idx) => {
+                        const sectionId = `section-${idx}`;
+                        return (
+                          <li key={idx}>
+                            <a
+                              href={`#${sectionId}`}
+                              onClick={(e) => {
+                                e.preventDefault();
+                                scrollToSection(sectionId);
+                              }}
+                            >
+                              <i className="bi bi-chevron-right"></i> {section.heading}
+                            </a>
+                          </li>
+                        );
+                      })}
+                      {blog.faqs && blog.faqs.length > 0 && (
+                        <li>
+                          <a
+                            href="#faqs-section"
+                            onClick={(e) => {
+                              e.preventDefault();
+                              scrollToSection('faqs-section');
+                            }}
+                          >
+                            <i className="bi bi-chevron-right"></i> Frequently Asked Questions
+                          </a>
+                        </li>
+                      )}
+                    </ul>
+                  </div>
+                )}
+              </div>
+
               {/* Key Takeaways Box */}
               {blog.keyTakeaways && blog.keyTakeaways.length > 0 && (
                 <div className="blog-takeaways-box">
@@ -289,27 +349,32 @@ export default function BlogDetail({ slug, setCurrentPage, setSelectedBlogSlug }
 
                   {/* Table if any */}
                   {section.table && (
-                    <div className="blog-table-wrapper">
-                      <table className="blog-content-table">
-                        <thead>
-                          <tr>
-                            {section.table.headers.map((h, hIdx) => (
-                              <th key={hIdx}>{h}</th>
-                            ))}
-                          </tr>
-                        </thead>
-                        <tbody>
-                          {section.table.rows.map((row, rIdx) => (
-                            <tr key={rIdx}>
-                              {row.map((cell, cIdx) => (
-                                <td key={cIdx}>
-                                  {cIdx === 0 ? <strong>{cell}</strong> : cell}
-                                </td>
+                    <div className="blog-table-container">
+                      <div className="blog-table-mobile-hint">
+                        <i className="bi bi-arrows"></i> Scroll horizontally to view full table &rarr;
+                      </div>
+                      <div className="blog-table-wrapper">
+                        <table className="blog-content-table">
+                          <thead>
+                            <tr>
+                              {section.table.headers.map((h, hIdx) => (
+                                <th key={hIdx}>{h}</th>
                               ))}
                             </tr>
-                          ))}
-                        </tbody>
-                      </table>
+                          </thead>
+                          <tbody>
+                            {section.table.rows.map((row, rIdx) => (
+                              <tr key={rIdx}>
+                                {row.map((cell, cIdx) => (
+                                  <td key={cIdx}>
+                                    {cIdx === 0 ? <strong>{cell}</strong> : cell}
+                                  </td>
+                                ))}
+                              </tr>
+                            ))}
+                          </tbody>
+                        </table>
+                      </div>
                     </div>
                   )}
 
